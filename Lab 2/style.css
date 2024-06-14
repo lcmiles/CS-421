@@ -252,3 +252,34 @@ form button:hover {
 html {
     scroll-behavior: smooth;
 }
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+@media (min-width: 1000px) {
+    .gallery-img {
+        width: 100%;
+    }
+}
+
