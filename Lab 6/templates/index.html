@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Password Strength Checker{% endblock %}
+{% block content %}
+    <h1>Password Strength Checker</h1>
+    <p>Welcome to the password strength tester! A password must have the following requirements to pass the test:</p>
+    <ul>
+        <li>It must contain a lowercase letter</li>
+        <li>It must contain an uppercase letter</li>
+        <li>It must end in a number</li>
+        <li>Password should be at least 8 characters</li>
+      </ul>
+    <form action="{{ url_for('report') }}" method="post">
+        <input type="username" name="username" placeholder="Enter your username" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <button type="submit">Check Strength</button>
+    </form>
+{% endblock %}
+ 

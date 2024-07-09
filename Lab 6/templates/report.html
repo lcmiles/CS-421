@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Password Report{% endblock %}
+{% block content %}
+    <h1>Password Strength Report</h1>
+    {% if result %}
+        <div class="result {% if result[0] == 'Strong password!' %} strong{% endif %}">
+            <ul>
+                {% for reason in result %}
+                    <li>{{ reason }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Check another password</a>
+{% endblock %}
+ 
