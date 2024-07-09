@@ -2,7 +2,7 @@
 {% block title %}Password Strength Checker{% endblock %}
 {% block content %}
     <h1>Password Strength Checker</h1>
-    <p>Welcome to the password strength tester! A password must have the following requirements to pass the test:</p>
+    <p>Welcome to the password strength tester! Fill out your username and password below to check if your password is secure. A password must have the following requirements to pass the security test:</p>
     <ul>
         <li>It must contain a lowercase letter</li>
         <li>It must contain an uppercase letter</li>
@@ -12,7 +12,7 @@
     <form action="{{ url_for('report') }}" method="post">
         <input type="username" name="username" placeholder="Enter your username" required>
         <input type="password" name="password" placeholder="Enter your password" required>
-        <button type="submit">Check Strength</button>
+        <button type="submit">Check Password Strength</button>
     </form>
 {% endblock %}
  
