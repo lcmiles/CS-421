@@ -73,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: #4cae4c;
+    background-color: #5cb85c;
 }
 
 .result {
@@ -101,5 +101,5 @@ button:hover {
 }
 
 .result.strong {
-    background-color: #a9d94f;
+    background-color: #5cb85c;
 }
