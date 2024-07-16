@@ -122,3 +122,10 @@ if __name__ == "__main__":
         db.create_all()
 
     app.run(debug=True)
+
+'''
+Sources:
+https://www.geeksforgeeks.org/login-and-registration-project-using-flask-and-mysql/
+https://stackoverflow.com/questions/21689364/method-not-allowed-flask-error-405
+https://chatgpt.com/share/11d82fe0-261b-4d16-865f-d082c7ab8de4
+'''
