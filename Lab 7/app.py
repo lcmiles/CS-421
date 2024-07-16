@@ -30,13 +30,17 @@ def index():
 
         user_id = session["user_id"]
 
-    return render_template("index.html")
+    return render_template("secretPage.html")
 
 @app.route("/register", methods=["GET", "POST"])
 
 def register():
 
     if request.method == "POST":
+
+        firstname = request.form.get("firstname")
+
+        lastname = request.form.get("lastname")
 
         username = request.form.get("username")
 
@@ -48,25 +52,17 @@ def register():
 
         if existing_user:
 
-            flash(
-
-                "Username already taken. Please choose a different username.", "error"
-
-            )
+            flash("Username already taken. Please choose a different username.", "error")
 
             return redirect(url_for("register"))
 
-        new_user = User(
-
-            username=username, email=email, password=generate_password_hash(password)
-
-        )
+        new_user = User(firstname=firstname, lastname=lastname, username=username, email=email, password=generate_password_hash(password))
 
         db.session.add(new_user)
 
         db.session.commit()
 
-        return redirect(url_for("login"))
+        return redirect(url_for("thankyou"))
 
     return render_template("register.html")
 
@@ -113,6 +109,11 @@ def logout():
     session.pop("profile_picture", None)
 
     return redirect(url_for("login"))
+
+@app.route("/thankyou", methods=["GET", "POST"])
+
+def thankyou():
+    return render_template("thankyou.html")
 
 if __name__ == "__main__":
 

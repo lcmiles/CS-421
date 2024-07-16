@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Thank You</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    Thank you for registering!
+
+    <form action="{{ url_for('login') }}" method="post" class="login-form"> <button type="submit" class="login-button">Login</button> </form>
+    
+</body>
+
+</html>
