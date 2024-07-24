@@ -1,32 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ToDoList = () => {
   const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState('');
+  const [newTask, setNewTask] = useState("");
   const addTask = () => {
-    if (newTask.trim() !== '') {
+    if (newTask.trim() !== "") {
       setTasks([...tasks, { text: newTask, isEditing: false }]);
-      setNewTask('');
+      setNewTask("");
     }
   };
-
   const deleteTask = (index) => {
     const updatedTasks = tasks.filter((task, i) => i !== index);
     setTasks(updatedTasks);
   };
-
   const startEditingTask = (index) => {
-    const updatedTasks = tasks.map((task, i) => (i === index ? { ...task, isEditing: true } : task));
-    setTasks(updatedTasks);
-  };
-
-  const saveTask = (index, newText) => {
     const updatedTasks = tasks.map((task, i) =>
-      i === index ? { ...task, text: newText, isEditing: false } : task
+      i === index ? { ...task, isEditing: true } : task,
     );
     setTasks(updatedTasks);
   };
-
+  const saveTask = (index, newText) => {
+    const updatedTasks = tasks.map((task, i) =>
+      i === index ? { ...task, text: newText, isEditing: false } : task,
+    );
+    setTasks(updatedTasks);
+  };
   return (
     <div>
       <h1>To-Do List</h1>
