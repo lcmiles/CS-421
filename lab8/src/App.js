@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
-import ToDoList from './ToDoList';
+import React from "react";
+import "./App.css";
+import ToDoList from "./ToDoList";
 
 function App() {
   return (
@@ -12,8 +12,6 @@ function App() {
   );
 }
 export default App;
- 
- 
 
 // Sources:
 // https://dev.to/misszamzam/a-simple-todo-list-app-with-react-1bj3
