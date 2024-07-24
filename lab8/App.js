@@ -12,3 +12,7 @@ function App() {
   );
 }
 export default App;
+
+// Sources:
+// https://dev.to/misszamzam/a-simple-todo-list-app-with-react-1bj3
+// https://www.geeksforgeeks.org/create-a-to-do-list-app-using-react-redux/
